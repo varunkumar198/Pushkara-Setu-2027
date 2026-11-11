@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushkara Setu 2027 | Godavari Pushkaralu Problem Statement 12</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">🌊</div>
+      <div class="brand-title">
+        <h1>Pushkara Setu 2027</h1>
+        <p>Digital Pilgrim Experience & Heritage Access (Problem Statement 12)</p>
+      </div>
+    </div>
+    <div class="nav-tabs">
+      <button id="btn-dashboard" class="nav-btn active" onclick="switchTab('dashboard')">ICCC Telematics Desk</button>
+      <button id="btn-pilgrim" class="nav-btn" onclick="switchTab('pilgrim')">Pilgrim PWA View</button>
+      <button id="btn-audio" class="nav-btn" onclick="switchTab('audio')">Heritage Audio</button>
+      <button id="btn-totem" class="nav-btn" onclick="switchTab('totem')">Edge Totem Simulator</button>
+      <button id="btn-reunion" class="nav-btn" onclick="switchTab('reunion')">Reunification Desk</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- View 1: ICCC Dashboard -->
+    <div id="dashboard-view" class="tab-content">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-title">Total Active Footfall</div>
+          <div class="stat-value" id="total-pilgrims-counter">1,428,950</div>
+          <div class="stat-sub" style="color: #4ade80;">↑ 4.2% ingress rate / hr</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Active Field Totems</div>
+          <div class="stat-value">250 / 250</div>
+          <div class="stat-sub" style="color: #4ade80;">100% telemetry online</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Ghats in Diversion</div>
+          <div class="stat-value" style="color: #f87171;">2 / 5</div>
+          <div class="stat-sub" style="color: #fbbf24;">Kotilingala & Pushkar Ghats</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Reunification SLA</div>
+          <div class="stat-value" style="color: #38bdf8;">11.4 min</div>
+          <div class="stat-sub" style="color: #4ade80;">Target: &lt; 15 mins</div>
+        </div>
+      </div>
+
+      <div class="grid-two">
+        <div class="card">
+          <div class="card-header">
+            <h3>Ghat Crowd Saturation & Queue Wait Times</h3>
+            <span class="badge badge-red">Automated Diversion Active</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Bathing Ghat</th>
+                <th>Density Saturation</th>
+                <th>Wait Time</th>
+                <th>Depth</th>
+                <th>Advisory Status</th>
+              </tr>
+            </thead>
+            <tbody id="ghat-table-body"></tbody>
+          </table>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Satellite Parking Ingress</h3>
+              <span class="badge badge-green">VMS Signage Linked</span>
+            </div>
+            <div id="parking-container"></div>
+          </div>
+
+          <div class="card" style="border-left: 4px solid var(--primary-saffron);">
+            <h3>Administrative Action Directive</h3>
+            <p style="font-size:0.85rem; color:#94a3b8; margin: 0.5rem 0;">
+              High congestion detected at <strong>Kotilingala</strong> and <strong>Pushkar Ghats</strong>.
+              Automated road VMS displays and WhatsApp broadcast bots are actively redirecting inbound transit toward
+              <strong>Saraswati Ghat</strong> and <strong>Markandeya Ghat</strong>.
+            </p>
+            <button class="btn-action" style="width: 100%; margin-top: 0.5rem;" onclick="alert('Emergency push broadcast sent to 240,000 active sessions.')">Issue Crowd Advisory Broadcast</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 2: Pilgrim PWA View -->
+    <div id="pilgrim-view" class="tab-content" style="display:none;">
+      <div class="card" style="max-width: 650px; margin: 0 auto;">
+        <div class="card-header">
+          <h3>📱 Pushkara Setu — Pilgrim Mobile Companion</h3>
+          <span class="badge badge-green">Offline Cache Ready</span>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">
+          Zero app download required. Accessible directly over 2G/3G edge networks or via QR totems.
+        </p>
+
+        <div style="background:#0f172a; padding:1rem; border-radius:8px; margin-bottom:1rem; border-left: 4px solid #22c55e;">
+          <h4 style="color:#4ade80;">Recommended Bathing Ghat: Saraswati Ghat</h4>
+          <p style="font-size:0.85rem; margin-top:4px;">Wait Time: <strong>&lt; 5 mins</strong> | Safe Bathing Depth: <strong>1.5 meters</strong></p>
+          <p style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">Walking time from Central Bus Stand: 12 minutes (shaded queue corridor).</p>
+        </div>
+
+        <div style="background:#0f172a; padding:1rem; border-radius:8px; margin-bottom:1rem; border-left: 4px solid #ef4444;">
+          <h4 style="color:#f87171;">Avoid: Kotilingala Ghat (Heavy Congestion)</h4>
+          <p style="font-size:0.85rem; margin-top:4px;">Wait Time: <strong>45 mins</strong> | Status: Gates temporarily regulated.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.75rem; margin-top:1rem;">
+          <button class="btn-action" onclick="alert('Opening GPS navigation to Saraswati Ghat Parking...')">Navigate to Parking</button>
+          <button class="btn-action" style="background:#059669;" onclick="switchTab('audio')">Listen to Holy Snanam Guide</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 3: Heritage Audio -->
+    <div id="audio-view" class="tab-content" style="display:none;">
+      <div class="card" style="max-width: 700px; margin: 0 auto;">
+        <div class="card-header">
+          <h3>🎧 Hyperlocal Heritage Audio & Ritual Protocols</h3>
+          <span class="badge badge-green">Multilingual Engine</span>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">
+          Verified cultural narratives and step-by-step ritual instructions curated in collaboration with the Endowments Department.
+        </p>
+
+        <div style="margin-bottom:1rem;">
+          <label style="font-size:0.85rem; color:#94a3b8;">Select Language:</label>
+          <select style="background:#0f172a; color:#fff; border:1px solid var(--border-color); padding:0.5rem; border-radius:6px; margin-left:0.5rem;">
+            <option>Telugu (తెలుగు)</option>
+            <option>Hindi (हिन्दी)</option>
+            <option>Tamil (தமிழ்)</option>
+            <option>Kannada (ಕನ್ನಡ)</option>
+            <option>English</option>
+          </select>
+        </div>
+
+        <div class="audio-player-box">
+          <div style="display:flex; justify-content:space-between;">
+            <div>
+              <strong>Track 01: Sacred Pushkara Snanam & Sankalpam</strong>
+              <p style="font-size:0.75rem; color:#94a3b8;">Kotilingala Ghat • 03:45 mins</p>
+            </div>
+            <span class="badge badge-green">128 kbps Geo-stream</span>
+          </div>
+          <div class="audio-controls">
+            <button id="play-btn" class="btn-play" onclick="toggleAudio()">▶</button>
+            <div style="flex:1;">
+              <p id="audio-status" style="font-size:0.8rem; color:#cbd5e1;">Click play to preview narration stream.</p>
+              <div class="progress-bar" style="margin-top:6px;"><div class="progress-fill fill-green" style="width: 35%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="audio-player-box" style="margin-top:0.75rem;">
+          <div style="display:flex; justify-content:space-between;">
+            <div>
+              <strong>Track 02: Legacy of Sir Arthur Cotton & The Godavari Anicut</strong>
+              <p style="font-size:0.75rem; color:#94a3b8;">Dowleswaram Barrage • 05:10 mins</p>
+            </div>
+            <button class="nav-btn" onclick="alert('Switching track...')">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 4: Edge Totem Simulator -->
+    <div id="totem-view" class="tab-content" style="display:none;">
+      <div class="card" style="max-width: 500px; margin: 0 auto; border: 2px solid var(--secondary-amber); text-align: center;">
+        <span class="badge badge-orange" style="margin-bottom:0.5rem; display:inline-block;">Hardware Kiosk Display</span>
+        <h2>TOTEM #KOTI-042</h2>
+        <p style="font-size:0.8rem; color:#94a3b8;">Location: Kotilingala Holding Compartment 4B</p>
+
+        <div style="background:#0f172a; padding:1.5rem; border-radius:12px; margin:1.25rem 0; border: 1px solid var(--border-color);">
+          <div style="font-size:2.5rem; font-weight:800; color:#f87171;">45 MINS</div>
+          <div style="font-size:0.85rem; text-transform:uppercase; color:#94a3b8;">Current Ghat Wait Time</div>
+          <hr style="border:0; border-top:1px solid var(--border-color); margin:1rem 0;">
+          <div style="text-align:left; font-size:0.85rem; line-height:1.6;">
+            <div>💧 <strong>Nearest RO Drinking Water:</strong> 40m North</div>
+            <div>🏥 <strong>Medical & First-Aid Post:</strong> 80m East (Tent 3)</div>
+            <div>🚻 <strong>Sanitation Block:</strong> 60m West</div>
+          </div>
+        </div>
+
+        <button class="btn-action" style="background:#ef4444; width:100%; font-size:1rem;" onclick="alert('Emergency Alert Triggered! Field Police Beat Officer 14 notified.')">🚨 Press for Emergency Police Help</button>
+      </div>
+    </div>
+
+    <!-- View 5: Reunification Desk -->
+    <div id="reunion-view" class="tab-content" style="display:none;">
+      <div class="card" style="max-width: 650px; margin: 0 auto;">
+        <div class="card-header">
+          <h3>🤝 Missing Persons Reunification Portal</h3>
+          <span class="badge badge-green">Target SLA: &lt; 15 mins</span>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">
+          Report lost children or elderly pilgrims. Dispatches instantly to 120 volunteer field kits and the Police CAD terminal.
+        </p>
+
+        <div id="sos-msg" style="display:none; background:rgba(34,197,94,0.15); border:1px solid #22c55e; color:#4ade80; padding:0.75rem; border-radius:6px; margin-bottom:1rem; font-size:0.85rem;"></div>
+
+        <form id="sos-form" onsubmit="submitSos(event)">
+          <div style="margin-bottom:0.75rem;">
+            <label style="font-size:0.85rem; color:#94a3b8;">Missing Person's Name / Description:</label>
+            <input type="text" id="sos-name" required placeholder="e.g., Ramana Murthy, Age 68, Blue Kurta" style="width:100%; padding:0.6rem; border-radius:6px; background:#0f172a; border:1px solid var(--border-color); color:#fff; margin-top:4px;">
+          </div>
+          <div style="margin-bottom:0.75rem;">
+            <label style="font-size:0.85rem; color:#94a3b8;">Last Known Location / Compartment:</label>
+            <input type="text" id="sos-desc" required placeholder="e.g., Near Kotilingala Ghat Gate 3" style="width:100%; padding:0.6rem; border-radius:6px; background:#0f172a; border:1px solid var(--border-color); color:#fff; margin-top:4px;">
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.85rem; color:#94a3b8;">Reporter Contact Phone Number:</label>
+            <input type="tel" required placeholder="+91 98XXXXXXXX" style="width:100%; padding:0.6rem; border-radius:6px; background:#0f172a; border:1px solid var(--border-color); color:#fff; margin-top:4px;">
+          </div>
+          <button type="submit" class="btn-action" style="width:100%;">Broadcast Reunification Alert</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Pushkara Setu 2027 • Godavari Pushkaralu Problem Statement 12 • Budget: ₹25,83,020 • Designed for Andhra Pradesh District Administration
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

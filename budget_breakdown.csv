@@ -1,0 +1,18 @@
+Line Item #,Category,Item Description,Basis / Unit,Quantity,Unit Rate (INR),Total Cost (INR)
+1.1,Software Engineering,"Lightweight Offline-First PWA (Service Workers, Geo-telematics)",Lump-sum,1,280000,280000
+1.2,Software Engineering,WhatsApp Business API Bot & Conversational Telephony Engine,Development & Integration,1,220000,220000
+1.3,Software Engineering,"ICCC Live Web Dashboard, WebSockets Queue Feed & Dispatch Portal",Modules,1,180000,180000
+2.1,Content & Localization,"Professional Voiceover & Audio Mastering (Telugu, Hindi, Tamil, Kannada, English)",Hours / Tracks,18 Tracks,10000,180000
+2.2,Content & Localization,Cultural Content Verification & Script Curation (AP Endowments Dept Liaison),Lump-sum,1,140000,140000
+3.1,Cloud Infrastructure,"MeitY-Empaneled Cloud Hosting, Elastic Auto-Scaling Multi-AZ Instances (Peak Load)",Months,4,65000,260000
+3.2,Cloud Infrastructure,"Enterprise CDN, DDoS Scrubbing & High-Throughput Edge Caching",Lump-sum,1,135000,135000
+4.1,Edge Hardware,IP66 Weather-Resistant QR/NFC Physical Totems & Mounting Stands,Per Totem,250,1000,250000
+4.2,Edge Hardware,"Field Signage Installation, QR Calibration & Compartment Rigging",Site Deployment,68 Zones,882.35,60000
+5.1,On-Ground Operations,"Digital Volunteer Training Kits, Field Coordinators & Device Support",Personnel / Kits,120 Kits,1250,150000
+5.2,On-Ground Operations,Rajamahendravaram ICCC On-Site Helpdesk & Rapid Response Cell Setup,Operational Units,1,75000,75000
+6.1,Testing & Security,CERT-In Empaneled VAPT Security Audits & DPDP Act Data Compliance Check,Audit Certification,1,90000,90000
+6.2,Testing & Security,Maha Shivaratri Live Field Pilot (Kotilingala Ghat Stress Testing),Pilot Operations,1,50000,50000
+,SUBTOTAL (Base Operational Cost),,,,,2070000
+7.0,Contingency Margin,Edge Hardware Replacements & Emergency Bandwidth Bursts (5.77%),Buffer,1,119424,119424
+8.0,Statutory Taxes,Goods and Services Tax (GST @ 18% on Base Cost),Statutory Tax,1,393596,393596
+,TOTAL PROJECT BUDGET,Comprehensive Turnkey Outlay,,,,2583020

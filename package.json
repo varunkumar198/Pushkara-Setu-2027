@@ -1,0 +1,16 @@
+{
+  "name": "varun-projects",
+  "version": "1.0.0",
+  "description": "**Problem Statement 12 Solution Proposal & Prototype Package** **Target Event:** Godavari Pushkaralu 2027 (June 26 – July 7, 2027)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
